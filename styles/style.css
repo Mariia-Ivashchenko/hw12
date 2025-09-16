@@ -110,11 +110,13 @@ header, .banner {
     width: 555px;
     height: 100%;
 }
+
 .wrapper__portfolio {
     display: flex;
     height: 695px;
     border-bottom: 2px solid darkgray;
 }
+
 .portfolio__text {
     width: 50%;
     height: 100%;
@@ -124,12 +126,14 @@ header, .banner {
     justify-content: space-between;
     font-weight: 400;
 }
+
 .portfolio__subtitle {
     font-size: 57px;
     line-height: normal;
     text-transform: uppercase;
 }
-.portfolio__text button{
+
+.portfolio__text button {
     width: 225px;
     height: 55px;
     background-color: white;
@@ -138,13 +142,15 @@ header, .banner {
     color: red;
     cursor: pointer;
 }
+
 .portfolio__logo {
     width: 50%;
     height: 100%;
-    padding: 110px 0 110px 10px ;
+    padding: 110px 0 110px 10px;
     display: flex;
     flex-wrap: wrap;
 }
+
 .portfolio__logo__item {
     display: flex;
     width: 50%;
@@ -152,12 +158,90 @@ header, .banner {
     flex-direction: column;
     padding: 20px;
 }
+
 .portfolio__logo__item i {
     color: #ff0000;
     font-size: 45px;
     margin-bottom: 15px;
 }
+
 .portfolio__logo__item h3 {
     font-size: 30px;
     font-weight: normal;
+}
+.products {
+    height: 1155px;
+}
+.wrapper__products__subtitle {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+}
+
+.products__subtitle {
+    text-align: center;
+    width: 515px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.products__subtitle h3 {
+    font-size: 57px;
+    font-weight: 400;
+    margin: 110px 0 0 0;
+}
+.products__subtitle__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.products__subtitle__text::after {
+    content: '';
+    width: 120px;
+    height: 3px;
+    background-color: #ff0000;
+    margin-top: 10px;
+}
+.wrapper__products__nav {
+    display: flex;
+    justify-content: center;
+    /*margin-bottom: 30px;*/
+    height: 170px;
+}
+
+.products__nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    align-items: center;
+}
+
+.products__nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.products__nav-list li a:hover,
+.products__nav-list li a.active {
+    color: #ff0000;
+}
+.wrapper__products__content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    padding: 0 0 130px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.products__content__item {
+    width: 285px;
+    height: 285px;
+    background-color: #f5f0dd;
 }

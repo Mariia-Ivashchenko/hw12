@@ -241,7 +241,79 @@ header, .banner {
     align-items: baseline;
 }
 .products__content__item {
-    width: 285px;
-    height: 285px;
+    width: 300px;
+    height: 300px;
     background-color: #f5f0dd;
+}
+.team {
+    height: 820px;
+}
+.team__subtitle {
+    display: flex;
+    flex-direction: column;
+    height: 185px;
+    max-width: 460px;
+    justify-content: space-between;
+}
+.team__subtitle h3 {
+    font-size: 35px;
+}
+.team__subtitle p {
+    font-size: 18px;
+}
+.team__subtitle::after {
+    content: '';
+    width: 120px;
+    height: 3px;
+    background-color: #ff0000;
+    margin-top: 10px;
+}
+.team__content {
+    height: 635px;
+    padding: 73px 0 110px;
+    display: flex;
+}
+.team__content__left {
+    margin-right: 70px;
+    background-color: #f5f0dd;
+    width: 320px;
+    height: 460px;
+}
+.team__content__mark {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.team__content__mark h3 {
+    font-size: 35px;
+}
+.team__content__mark p {
+    font-size: 18px;
+}
+.team__content__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.team__content__list a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+    font-style: italic;
+    transition: color 0.3s;
+}
+.team__content__row {
+    height: 260px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.team__content__item {
+    width: 200px;
+    height: 200px;
+    background-color: #f5f0dd;
+}
+.team__content__item:hover {
+    background-color: #c5bfbf;
 }

@@ -340,6 +340,7 @@ header, .banner {
 .wrapper__subscription form input {
     height: 80px;
     width: 520px;
+    padding-left: 30px;
 }
 .wrapper__subscription form button {
     height: 80px;
@@ -349,4 +350,74 @@ header, .banner {
     color: white;
     border-radius: 15px;
     border-color: red;
+}
+.contact {
+    height: 990px;
+}
+.wrapper__contact__subtitle {
+    display: flex;
+    flex-direction: column;
+    max-width: 730px;
+    height: 395px;
+    justify-content: space-between;
+    padding: 100px 0 75px;
+}
+.wrapper__contact__subtitle::after {
+    content: '';
+    width: 120px;
+    height: 3px;
+    background-color: #ff0000;
+    margin-top: 10px;
+}
+.wrapper__contact__subtitle h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.wrapper__contact__subtitle p {
+    font-size: 18px;
+}
+.wrapper__contact__content {
+ height: 590px;
+    display: flex;
+}
+.contact__content__left {
+    height: 100%;
+    width: 835px;
+    padding: 0 115px 110px 0;
+}
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.contact__form input {
+    height: 65px;
+    width: 335px;
+}
+.contact__form input, textarea {
+    background-color: #EFEFEF;
+    border-radius: 15px;
+    padding-left: 30px;
+}
+.contact__form__input {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__form textarea {
+    height: 245px;
+    width: 720px;
+    padding-top: 30px;
+}
+.contact__form button {
+    height: 70px;
+    border-radius: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+}
+.contact__content__right {
+    background-color: black;
+    height: calc(100% - 110px);
+    width: 570px;
 }

@@ -350,9 +350,6 @@ header, .banner {
     border-radius: 15px;
     border-color: red;
 }
-.contact {
-    height: 395px;
-}
 .wrapper__contact__subtitle {
     display: flex;
     flex-direction: column;
@@ -382,7 +379,7 @@ header, .banner {
     height: 100%;
 }
 .wrapper__contact__content {
- height: 590px;
+    height: 590px;
     display: flex;
 }
 .contact__content__left {
@@ -414,6 +411,7 @@ header, .banner {
     height: 245px;
     width: 720px;
     padding-top: 30px;
+    resize: none;
 }
 .contact__form button {
     height: 70px;
@@ -431,4 +429,23 @@ header, .banner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.footer {
+    height: 105px;
+    background-color: black;
+}
+.wrapper__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.footer__copyright, .footer__social {
+    color: white;
+    display: flex;
+    gap: 15px;
+}
+.footer__social a {
+    color: white;
+    font-size: 30px;
 }

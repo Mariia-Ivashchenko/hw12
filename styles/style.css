@@ -12,8 +12,6 @@ body {
     padding: 0 15px;
     margin: 0 auto;
     width: 100%;
-    /*?*/
-    /*height: 100%;*/
 }
 
 ul {
@@ -25,6 +23,7 @@ ul {
 a {
     text-decoration: none;
     color: #000000;
+    display: inline-block;
 }
 
 
@@ -33,47 +32,29 @@ a {
 
 header {
     background-color: #f6f2f2;
+    padding: 30px 0 0 0;
 }
 
 .header__nav {
     background-color: #313030;
-    /*?*/
-    padding: 0 430px 0 355px;
-    /*height: 100%;*/
-    /*width: 100%;*/
 }
 
 header a {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    /*?*/
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 25px 30px;
+}
+
+header a:hover,
+header .active a {
+    background-color: #ff3f40;
+    transition: .3s;
 }
 
 .header__nav-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    font-size: 12px;
-}
-
-.header__nav-list li {
-    width: 100%;
-    height: 100%;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 40px 0 30px;
-}
-
-.header__nav-list li:hover {
-    background-color: red;
 }
 
 
@@ -289,12 +270,15 @@ header a {
     max-width: 460px;
     justify-content: space-between;
 }
+
 .team__subtitle h3 {
     font-size: 35px;
 }
+
 .team__subtitle p {
     font-size: 18px;
 }
+
 .team__subtitle::after {
     content: '';
     width: 120px;
@@ -302,34 +286,41 @@ header a {
     background-color: #ff0000;
     margin-top: 10px;
 }
+
 .team__content {
     height: 635px;
     padding: 73px 0 110px;
     display: flex;
 }
+
 .team__content__left {
     margin-right: 70px;
     background-color: #f5f0dd;
     width: 320px;
     height: 460px;
 }
+
 .team__content__mark {
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .team__content__mark h3 {
     font-size: 35px;
 }
+
 .team__content__mark p {
     font-size: 18px;
 }
+
 .team__content__list {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
 }
+
 .team__content__list a {
     text-decoration: none;
     outline: none;
@@ -337,24 +328,29 @@ header a {
     font-style: italic;
     transition: color 0.3s;
 }
+
 .team__content__row {
     height: 260px;
     display: flex;
     align-items: end;
     justify-content: space-between;
 }
+
 .team__content__item {
     width: 200px;
     height: 200px;
     background-color: #f5f0dd;
 }
+
 .team__content__item:hover {
     background-color: #c5bfbf;
 }
+
 .subscription {
     height: 510px;
     background-color: #f5f0dd;
 }
+
 .wrapper__subscription {
     display: flex;
     padding: 135px 55px;
@@ -363,19 +359,23 @@ header a {
     justify-content: space-between;
     align-items: center;
 }
+
 .wrapper__subscription h2 {
     font-size: 50px;
     color: white;
 }
+
 .wrapper__subscription p {
     font-size: 16px;
     color: white;
 }
+
 .wrapper__subscription form input {
     height: 80px;
     width: 520px;
     padding-left: 30px;
 }
+
 .wrapper__subscription form button {
     height: 80px;
     width: 215px;
@@ -385,6 +385,7 @@ header a {
     border-radius: 15px;
     border-color: red;
 }
+
 .wrapper__contact__subtitle {
     display: flex;
     flex-direction: column;
@@ -393,6 +394,7 @@ header a {
     justify-content: space-between;
     padding: 100px 0 75px;
 }
+
 .wrapper__contact__subtitle::after {
     content: '';
     width: 120px;
@@ -400,54 +402,65 @@ header a {
     background-color: #ff0000;
     margin-top: 10px;
 }
+
 .wrapper__contact__subtitle h2 {
     font-size: 50px;
     text-transform: uppercase;
 }
+
 .wrapper__contact__subtitle p {
     font-size: 18px;
 }
+
 .container__max {
     max-width: 1570px;
     margin: 0 auto;
     width: 100%;
     height: 100%;
 }
+
 .wrapper__contact__content {
     height: 590px;
     display: flex;
 }
+
 .contact__content__left {
     height: 100%;
     width: 835px;
     padding: 0 115px 110px 0;
     margin-left: 160px;
 }
+
 .contact__form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
 }
+
 .contact__form input {
     height: 65px;
     width: 335px;
 }
+
 .contact__form input, textarea {
     background-color: #EFEFEF;
     border-radius: 15px;
     padding-left: 30px;
 }
+
 .contact__form__input {
     display: flex;
     justify-content: space-between;
 }
+
 .contact__form textarea {
     height: 245px;
     width: 720px;
     padding-top: 30px;
     resize: none;
 }
+
 .contact__form button {
     height: 70px;
     border-radius: 15px;
@@ -455,6 +468,7 @@ header a {
     color: white;
     border: none;
 }
+
 .contact__content__right {
     background-color: black;
     height: calc(100% - 110px);
@@ -465,21 +479,25 @@ header a {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .footer {
     height: 105px;
     background-color: black;
 }
+
 .wrapper__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
 }
+
 .footer__copyright, .footer__social {
     color: white;
     display: flex;
     gap: 15px;
 }
+
 .footer__social a {
     color: white;
     font-size: 30px;

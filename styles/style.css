@@ -2,7 +2,7 @@ body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: #000000;
-/*?*/
+    /*?*/
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -199,91 +199,67 @@ header .active a {
 
 
 .products {
-    height: 1155px;
+    padding: 100px 0 70px;
 }
 
-.wrapper__products__subtitle {
-    display: flex;
-    justify-content: center;
-    height: 250px;
-}
-
-.products__subtitle {
+.products .products__subtitle {
+    font-size: 42px;
+    font-weight: bold;
     text-align: center;
-    width: 515px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    margin-bottom: 35px;
 }
 
-.products__subtitle h3 {
-    font-size: 57px;
-    font-weight: 400;
-    margin: 110px 0 0 0;
-}
-
-.products__subtitle__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.products .products__subtitle__text {
+    max-width: 510px;
+    margin: 0 auto 35px;
     text-align: center;
 }
 
-.products__subtitle__text::after {
-    content: '';
-    width: 120px;
+.products .products__line {
+    max-width: 130px;
     height: 3px;
-    background-color: #ff0000;
-    margin-top: 10px;
+    background-color: #ff2d2d;
+    margin: 0 auto 20px;
 }
 
-.wrapper__products__nav {
+.products .products__nav-list {
     display: flex;
     justify-content: center;
-    /*margin-bottom: 30px;*/
-    height: 170px;
+    gap: 55px;
 }
 
-.products__nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 40px;
-    align-items: center;
+.products .products__nav-list a {
+    color: #4c4c4c;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 70px 0;
 }
 
-.products__nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+.products .products__nav-list li a:hover,
+.products .products__nav-list li a.active {
+    color: #ff2d2d;
+    transition: 0.3s;
 }
 
-.products__nav-list li a:hover,
-.products__nav-list li a.active {
-    color: #ff0000;
-}
-
-.wrapper__products__content {
+.row__products__content {
     display: flex;
     flex-wrap: wrap;
-    height: 800px;
-    padding: 0 0 130px;
-    justify-content: space-between;
-    align-items: baseline;
+    height: 600px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .products__content__item {
-    /*width: 300px;*/
-    height: 300px;
-    width: 23%;
+    width: calc(25% - 15px);
     background-color: #f5f0dd;
 }
 
+
+/*section team*/
+
+
 .team {
-    height: 820px;
+    padding: 70px 0 115px;
 }
 
 .team__subtitle {
@@ -311,8 +287,8 @@ header .active a {
 }
 
 .team__content {
-    height: 635px;
-    padding: 73px 0 110px;
+    /*height: 635px;*/
+    /*padding: 73px 0 110px;*/
     display: flex;
 }
 

@@ -262,88 +262,81 @@ header .active a {
     padding: 70px 0 115px;
 }
 
-.team__subtitle {
-    display: flex;
-    flex-direction: column;
-    height: 185px;
-    max-width: 460px;
-    justify-content: space-between;
+.team .team__subtitle  {
+    font-size: 42px;
+    margin-bottom: 35px;
+    font-weight: bold;
 }
 
-.team__subtitle h3 {
-    font-size: 35px;
+.team .team__subtitle__text {
+    max-width: 450px;
+    margin-bottom: 30px;
 }
 
-.team__subtitle p {
-    font-size: 18px;
-}
-
-.team__subtitle::after {
-    content: '';
-    width: 120px;
+.team .team__line {
+    max-width: 130px;
     height: 3px;
-    background-color: #ff0000;
-    margin-top: 10px;
+    background-color: #ff2d2d;
+    margin-bottom: 60px;
 }
 
-.team__content {
-    /*height: 635px;*/
-    /*padding: 73px 0 110px;*/
-    display: flex;
-}
-
-.team__content__left {
+.team .team__content__left {
     margin-right: 70px;
     background-color: #f5f0dd;
-    width: 320px;
-    height: 460px;
+    width: calc(100% / 3);
 }
 
-.team__content__mark {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.team .team__content__title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
-.team__content__mark h3 {
-    font-size: 35px;
+.team .team__content__text {
+    margin-bottom: 45px;
 }
 
-.team__content__mark p {
-    font-size: 18px;
-}
-
-.team__content__list {
-    display: flex;
-    flex-wrap: wrap;
+.team .team__content__list {
     gap: 40px;
 }
 
-.team__content__list a {
-    text-decoration: none;
-    outline: none;
-    color: black;
+.team .team__content__list a {
     font-style: italic;
     transition: color 0.3s;
+    margin-bottom: 70px;
 }
 
-.team__content__row {
-    height: 260px;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+.team .team__content__items {
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.team__content__item {
-    width: 200px;
-    height: 200px;
+.team .team__content__item {
+    width: calc(100% / 4 - 15px);
+    height: 215px;
     background-color: #f5f0dd;
+    position: relative;
 }
 
-.team__content__item:hover {
-    background-color: #c5bfbf;
+.team .team__item__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #7a786e;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
 }
+
+.team .team__content__item:hover .team__item__title{
+    opacity: 1;
+}
+
+
+/*section subscription*/
+
 
 .subscription {
     height: 510px;

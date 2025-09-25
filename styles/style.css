@@ -339,44 +339,54 @@ header .active a {
 
 
 .subscription {
-    height: 510px;
+    padding: 140px 0;
     background-color: #f5f0dd;
 }
 
-.wrapper__subscription {
-    display: flex;
-    padding: 135px 55px;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.wrapper__subscription h2 {
-    font-size: 50px;
+.subscription .subscription__subtitle {
+    font-size: 45px;
     color: white;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.wrapper__subscription p {
-    font-size: 16px;
+.subscription .subscription__description {
     color: white;
+    text-align: center;
+    margin-bottom: 55px;
 }
 
-.wrapper__subscription form input {
+.subscription .subscription__form {
+    text-align: center;
+}
+
+.subscription .subscription__form input {
     height: 80px;
-    width: 520px;
-    padding-left: 30px;
+    /*max-width: 520px;*/
+    padding: 30px 360px 30px 30px;
+    margin-right: 20px;
 }
 
-.wrapper__subscription form button {
-    height: 80px;
-    width: 215px;
-    margin-left: 20px;
-    background-color: red;
+.subscription .subscription__button {
+    background-color: #ff2d2d;
     color: white;
-    border-radius: 15px;
-    border-color: red;
+    border-radius: 5px;
+    border: 2px solid #ff2d2d;
+    padding: 25px 50px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
 }
+
+.subscription .subscription__button:hover {
+    transition: .3s;
+    background-color: transparent;
+    color: #ff2d2d;
+}
+
+
+/*section contact*/
+
 
 .wrapper__contact__subtitle {
     display: flex;
@@ -471,6 +481,10 @@ header .active a {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+/*footer*/
+
 
 .footer {
     height: 105px;

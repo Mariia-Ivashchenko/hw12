@@ -21,7 +21,7 @@
 
 <header>
     <div class="container">
-        <nav class="header__nav">
+        <nav class="header__nav" role="navigation" aria-label="Primary">
             <ul class="header__nav-list">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Portfolio</a></li>
@@ -51,7 +51,8 @@
                 </div>
                 <div class="col banner__video">
                     <div class="banner__video-wrapper">
-                        <iframe height="315"
+                        <iframe loading="lazy"
+                                height="315"
                                 src="https://www.youtube.com/embed/K6Nz0qF9nXo?si=MXyx29WBveQGKcEs&amp;start=27"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -124,13 +125,23 @@
             </p>
             <div class="products__line"></div>
 
-            <nav class="products__nav">
-                <ul class="products__nav-list">
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">PRINT TEMPLATE</a></li>
-                    <li><a href="#">WEB TEMPLATE</a></li>
-                    <li><a href="#">USER INTERFACE</a></li>
-                    <li><a href="#">MOCK-UP</a></li>
+            <nav class="products__nav" role="navigation" aria-label="Product filters">
+                <ul class="products__nav-list" role="tablist">
+                    <li>
+                        <button type="button" aria-selected="true">ALL</button>
+                    </li>
+                    <li>
+                        <button type="button">PRINT TEMPLATE</button>
+                    </li>
+                    <li>
+                        <button type="button">WEB TEMPLATE</button>
+                    </li>
+                    <li>
+                        <button type="button">USER INTERFACE</button>
+                    </li>
+                    <li>
+                        <button type="button"> MOCK-UP</button>
+                    </li>
                 </ul>
             </nav>
 
@@ -154,6 +165,19 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div class="team__line"></div>
+
+<!--                        <article class="team__member">-->
+<!--                            <figure class="team__member-mark row">-->
+<!--                                <img src="../assets/mark.png" alt="Mark Waugh — Product Designer">-->
+<!--                                <figcaption>-->
+<!--                                    <h3 class="team__content__title">Mark Waugh</h3>-->
+<!--                                    <p class="team__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed-->
+<!--                                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+<!--                                    </p>-->
+<!--                                </figcaption>-->
+<!--                            </figure>-->
+<!--                        </article>-->
+
             <div class="row team__content">
                 <div class="team__content__left"></div>
                 <div class="team__content__right">
@@ -161,6 +185,7 @@
                     <p class="team__content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
+
                     <ul class="row team__content__list">
                         <li><a href="#">Facebook</a></li>
                         <li><a href="#">Dribble</a></li>
@@ -195,9 +220,10 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
             </p>
             <form class="subscription__form">
-                <label for="email"></label>
-                <input type="email" placeholder="Email Address..." id="email">
-                <button class="subscription__button">Subscribe</button>
+                <label>
+                    <input type="email" placeholder="Email Address...">
+                </label>
+                <button class="subscription__button" type="submit">Subscribe</button>
             </form>
         </div>
     </section>
@@ -223,7 +249,7 @@
 
                         <label for="message"></label>
                         <textarea placeholder="Type your message" id="message"></textarea>
-                        <button>SEND MESSAGE</button>
+                        <button type="submit">SEND MESSAGE</button>
                     </form>
                 </div>
                 <div class="contact__content__right">
@@ -234,10 +260,9 @@
                         Jalalabad 24/A, Ambaarkhana, Sylhet, Bangladesh
                     </address>
                     <p class="contact__address">
-                        redwan@deliverweb.com
+                        <a href="mailto:redwan@deliverweb.com">redwan@deliverweb.com</a>
                     </p>
-                    <p>
-                        (+880) 1234567890
+                    <p><a href="tel:+8801234567890">(+880) 1234567890</a>
                     </p>
                 </div>
             </div>

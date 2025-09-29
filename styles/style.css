@@ -228,15 +228,15 @@ header .active a {
     gap: 55px;
 }
 
-.products .products__nav-list a {
+.products .products__nav-list button {
     color: #4c4c4c;
     font-size: 22px;
     font-weight: 600;
     padding: 70px 0;
 }
 
-.products .products__nav-list li a:hover,
-.products .products__nav-list li a.active {
+.products .products__nav-list li button:hover,
+.products .products__nav-list li button.active {
     color: #ff2d2d;
     transition: 0.3s;
 }
@@ -285,6 +285,15 @@ header .active a {
     background-color: #f5f0dd;
     width: calc(100% / 3);
 }
+
+/*.team .team__member img {*/
+/*    flex: 1;*/
+/*}*/
+
+/*.team .team__member figcaption {*/
+/*    flex: 2;*/
+/*    height: 150px;*/
+/*}*/
 
 .team .team__content__title {
     font-size: 30px;
@@ -453,13 +462,14 @@ header .active a {
     background-color: red;
     color: white;
     border: none;
+    text-align: center;
 }
 
 .contact .contact__content__right {
     background-color: black;
     width: 40%;
     color: white;
-    padding: 135px 205px 110px 75px;
+    padding: 135px 0 110px 75px;
 }
 
 .contact .contact__info {
@@ -470,6 +480,10 @@ header .active a {
 
 .contact .contact__address {
     margin-bottom: 25px;
+}
+
+.contact .contact__content__right a {
+    color: white;
 }
 
 
@@ -494,4 +508,16 @@ header .active a {
 
 .footer .footer__social a:last-child {
     margin-right: 0;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 767px;
+    }
 }

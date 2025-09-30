@@ -244,14 +244,12 @@ header .active a {
 .row__products__content {
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
     column-gap: 20px;
     row-gap: 20px;
 }
 
 .products__content__item {
     width: calc(25% - 15px);
-    background-color: #f5f0dd;
 }
 
 
@@ -280,20 +278,25 @@ header .active a {
     margin-bottom: 60px;
 }
 
-.team .team__content__left {
-    margin-right: 70px;
-    background-color: #f5f0dd;
-    width: calc(100% / 3);
+/*.team .team__content__left {*/
+/*    margin-right: 70px;*/
+/*    background-color: #f5f0dd;*/
+/*    width: calc(100% / 3);*/
+/*}*/
+
+.team .team__members {
+    position: relative;
 }
 
-/*.team .team__member img {*/
-/*    flex: 1;*/
-/*}*/
+.team .team__member img {
+    flex: 1;
+    margin-right: 70px;
+    max-height: 460px;
+}
 
-/*.team .team__member figcaption {*/
-/*    flex: 2;*/
-/*    height: 150px;*/
-/*}*/
+.team .team__member figcaption {
+    flex: 2;
+}
 
 .team .team__content__title {
     font-size: 30px;
@@ -303,10 +306,14 @@ header .active a {
 
 .team .team__content__text {
     margin-bottom: 45px;
+    max-width: 640px;
 }
 
 .team .team__content__list {
     gap: 40px;
+    left: 460px;
+    position: absolute;
+    top: 185px;
 }
 
 .team .team__content__list a {
@@ -318,13 +325,19 @@ header .active a {
 .team .team__content__items {
     flex-wrap: wrap;
     gap: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 63%;
 }
 
 .team .team__content__item {
     width: calc(100% / 4 - 15px);
-    height: 215px;
-    background-color: #f5f0dd;
     position: relative;
+}
+
+.team .team__content__item-img {
+    width: 100%;
 }
 
 .team .team__item__title {

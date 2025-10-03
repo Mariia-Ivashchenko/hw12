@@ -407,6 +407,7 @@ header .active a {
 
 .contact {
     padding: 100px 0;
+    overflow-x: hidden;
 }
 
 .contact .contact__subtitle {
@@ -480,6 +481,19 @@ header .active a {
     width: 40%;
     color: white;
     padding: 135px 0 110px 75px;
+    position: relative;
+}
+
+.contact .contact__content__right:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: black;
+    height: 100%;
+    width: 100vw;
+    left: 99%;
+    top: 0;
+
 }
 
 .contact .contact__info {

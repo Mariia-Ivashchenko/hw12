@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: 'Open Sans';
     src: local('Open Sans Italic'), local('OpenSans-Italic'),
@@ -57,6 +64,7 @@
 *,
 *::before,
 *::after {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -95,6 +103,7 @@ ol[class] {
 }
 
 a:not([class]) {
+    -webkit-text-decoration-skip: ink;
     text-decoration-skip-ink: auto;
 }
 
@@ -124,8 +133,12 @@ label {
 
 @media (prefers-reduced-motion: reduce) {
     * {
+        -webkit-animation-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
         animation-iteration-count: 1 !important;
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
@@ -154,7 +167,6 @@ body {
     font-size: var(--font-md);
     color: var(--main-text-color);
     /*?*/
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -178,6 +190,8 @@ a {
 }
 
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -213,11 +227,17 @@ header a {
 header a:hover,
 header .active a {
     background-color: var(--accent-color);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
 .header__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -231,7 +251,11 @@ header .active a {
 }
 
 .banner .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -259,6 +283,8 @@ header .active a {
 }
 
 .banner .banner__contact:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     background-color: transparent;
     color: var(--accent-color);
@@ -269,6 +295,7 @@ header .active a {
     height: 100%;
     aspect-ratio: 16 / 9;
     border: none;
+    -webkit-box-shadow: 0 0 70px -10px black;
     box-shadow: 0 0 70px -10px black;
 }
 
@@ -308,15 +335,22 @@ header .active a {
 }
 
 .portfolio .portfolio__button:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     background-color: var(--accent-color);
     color: var(--minor-text-color);
 }
 
 .portfolio .portfolio__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     row-gap: 55px;
+    -webkit-column-gap: 45px;
+    -moz-column-gap: 45px;
     column-gap: 45px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -378,7 +412,11 @@ header .active a {
 }
 
 .products .products__nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 55px;
 }
@@ -393,12 +431,19 @@ header .active a {
 .products .products__nav-list li button:hover,
 .products .products__nav-list li button.active {
     color: var(--accent-color);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 .row__products__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
     column-gap: 20px;
     row-gap: 20px;
 }
@@ -438,12 +483,16 @@ header .active a {
 }
 
 .team .team__member img {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin-right: 70px;
     max-height: 460px;
 }
 
 .team .team__member figcaption {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
     flex: 2;
 }
 
@@ -467,11 +516,14 @@ header .active a {
 
 .team .team__content__list a {
     font-style: italic;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
     margin-bottom: 70px;
 }
 
 .team .team__content__items {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 20px;
     position: absolute;
@@ -550,6 +602,8 @@ header .active a {
 }
 
 .subscription .subscription__button:hover {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     background-color: transparent;
     color: var(--accent-color);
@@ -582,6 +636,8 @@ header .active a {
 }
 
 .contact .contact__content {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -590,6 +646,7 @@ header .active a {
 }
 
 .contact .contact__form {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -673,14 +730,22 @@ header .active a {
 }
 
 .footer .footer__row {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .footer .footer__social {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: calc(100% / 3);
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
 }
 
@@ -732,6 +797,9 @@ header .active a {
     }
 
     .banner .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -761,6 +829,9 @@ header .active a {
     }
 
     .portfolio .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         gap: 0;
     }
@@ -780,8 +851,10 @@ header .active a {
     }
 
     .portfolio .portfolio__logo {
-         row-gap: 0;
-         column-gap: 0;
+        row-gap: 0;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;
     }
 
     .portfolio .portfolio__logo__item {
@@ -842,7 +915,7 @@ header .active a {
 
     .team .team__content__list a {
         font-size: var(--font-ld);
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 
     .team .team__content__items {
@@ -869,6 +942,9 @@ header .active a {
     }
 
     .contact .contact__content {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -917,6 +993,8 @@ header .active a {
     }
 
     .row__products__content {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -944,6 +1022,7 @@ header .active a {
     }
 
     .team .team__content__list {
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 40px;
         top: 230px;
@@ -960,6 +1039,8 @@ header .active a {
     .team .team__content__items {
         position: static;
         max-width: 100%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         gap: 0;
     }
@@ -1022,6 +1103,9 @@ header .active a {
     }
 
     .team .team__member-mark {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1045,8 +1129,13 @@ header .active a {
     }
 
     .team .team__content__items {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         row-gap: 10px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -1072,6 +1161,9 @@ header .active a {
     }
 
     .contact .contact__form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1084,6 +1176,9 @@ header .active a {
     }
 
     .footer .footer__row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -1094,6 +1189,8 @@ header .active a {
 
     .footer .footer__social {
         width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 

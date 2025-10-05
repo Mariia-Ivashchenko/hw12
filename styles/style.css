@@ -1,150 +1,122 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @font-face {
     font-family: 'Open Sans';
-    src: local('Open Sans Italic'), local('OpenSans-Italic'),
-    url('../fonts/OpenSans-Italic.woff2') format('woff2'),
-    url('../fonts/OpenSans-Italic.woff') format('woff'),
-    url('../fonts/OpenSans-Italic.ttf') format('truetype');
-    font-weight: normal;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url('../fonts/OpenSans-Italic.woff2') format('woff2'), url('../fonts/OpenSans-Italic.woff') format('woff'), url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: 400;
     font-style: italic;
-    font-display: swap;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
-    url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
-    url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
-    url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
-    font-weight: bold;
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'), url('../fonts/OpenSans-ExtraBold.woff') format('woff'), url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-    url('../fonts/OpenSans-SemiBold.woff') format('woff'),
-    url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('../fonts/OpenSans-SemiBold.woff2') format('woff2'), url('../fonts/OpenSans-SemiBold.woff') format('woff'), url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-    url('../fonts/OpenSans-Regular.woff') format('woff'),
-    url('../fonts/OpenSans-Regular.ttf') format('truetype');
-    font-weight: normal;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: local('Open Sans Bold'), local('OpenSans-Bold'),
-    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-    url('../fonts/OpenSans-Bold.woff') format('woff'),
-    url('../fonts/OpenSans-Bold.ttf') format('truetype');
-    font-weight: bold;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    font-display: swap
 }
 
+ol[class], ul, ul[class] {
+    list-style: none;
+    padding: 0
+}
 
-*,
-*::before,
-*::after {
+a, label {
+    display: inline-block
+}
+
+.btn, header a {
+    font-weight: 700
+}
+
+.banner .banner__title, .portfolio .portfolio__subtitle {
+    font-size: var(--font-xxl);
+    text-transform: uppercase;
+    letter-spacing: 3px
+}
+
+.container, .line {
+    width: 100%;
+    margin: 0 auto
+}
+
+.products .products__line, .team .team__line {
+    height: 3px;
+    background-color: var(--accent-color)
+}
+
+*, ::after, ::before {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
-ul[class],
-ol[class] {
-    padding: 0;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-    margin: 0;
+blockquote, body, dd, dl, figcaption, figure, h1, h2, h3, h4, li, ol[class], p, ul[class] {
+    margin: 0
 }
 
 body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-
-ul[class],
-ol[class] {
-    list-style: none;
+    line-height: 1.5
 }
 
 a:not([class]) {
     -webkit-text-decoration-skip: ink;
-    text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto
 }
 
 img {
     max-width: 100%;
-    display: block;
+    display: block
 }
 
 article > * + * {
-    margin-top: 1em;
+    margin-top: 1em
 }
 
-input,
-button,
-textarea,
-select {
-    font: inherit;
+button, input, select, textarea {
+    font: inherit
 }
 
 button {
-    all: unset;
-}
-
-label {
-    display: inline-block;
+    all: unset
 }
 
 @media (prefers-reduced-motion: reduce) {
     * {
-        -webkit-animation-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
+        -webkit-animation-duration: 0s !important;
+        animation-duration: 0s !important;
         -webkit-animation-iteration-count: 1 !important;
         animation-iteration-count: 1 !important;
-        -webkit-transition-duration: 0.01ms !important;
-        -o-transition-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+        -webkit-transition-duration: 0s !important;
+        -o-transition-duration: 0s !important;
+        transition-duration: 0s !important;
+        scroll-behavior: auto !important
     }
 }
-
-
 
 :root {
     --accent-color: #ff2d2d;
@@ -153,83 +125,68 @@ label {
     --light-bg-color: #f5f0dd;
     --main-text-color: #4c4c4c;
     --minor-text-color: #FFFFFFFF;
-
     --font-sm: 12px;
     --font-md: 16px;
     --font-ld: 24px;
     --font-xl: 32px;
-    --font-xxl: 48px;
-
+    --font-xxl: 48px
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     font-size: var(--font-md);
     color: var(--main-text-color);
-    /*?*/
-    font-style: normal;
+    font-style: normal
 }
 
 .container {
     max-width: 1280px;
-    padding: 0 15px;
-    margin: 0 auto;
-    width: 100%;
+    padding: 0 15px
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin: 0
 }
 
 a {
     text-decoration: none;
-    color: #000000;
-    display: inline-block;
+    color: #000
 }
 
 .row {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex
 }
 
 .btn {
     border: 2px solid var(--accent-color);
     border-radius: 5px;
     padding: 13px 53px;
-    font-weight: 700;
     font-size: var(--font-ld);
-    text-transform: capitalize;
+    text-transform: capitalize
 }
-
-
-/*header*/
-
 
 header {
     background-color: var(--header-color);
-    padding: 30px 0 0 0;
+    padding: 30px 0 0
 }
 
 .header__nav {
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color)
 }
 
 header a {
-    font-weight: bold;
     text-transform: uppercase;
     color: var(--minor-text-color);
-    padding: 25px 30px;
+    padding: 25px 30px
 }
 
-header a:hover,
-header .active a {
+header .active a, header a:hover {
     background-color: var(--accent-color);
     -webkit-transition: .3s;
     -o-transition: .3s;
-    transition: .3s;
+    transition: .3s
 }
 
 .header__nav-list {
@@ -238,16 +195,12 @@ header .active a {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center
 }
-
-
-/*section banner*/
-
 
 .banner {
     padding: 110px 0;
-    background-color: var(--header-color);
+    background-color: var(--header-color)
 }
 
 .banner .row {
@@ -256,30 +209,27 @@ header .active a {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .banner .col {
-    width: 45%;
+    width: 45%
 }
 
 .banner .banner__title {
-    font-size: var(--font-xxl);
     line-height: 65px;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
 
 .banner .banner__description {
     max-width: 515px;
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
 .banner .banner__contact {
     background-color: var(--accent-color);
-    color: var(--minor-text-color);
+    color: var(--minor-text-color)
 }
 
 .banner .banner__contact:hover {
@@ -287,51 +237,44 @@ header .active a {
     -o-transition: .3s;
     transition: .3s;
     background-color: transparent;
-    color: var(--accent-color);
+    color: var(--accent-color)
 }
 
 .banner__video-wrapper iframe {
     width: 100%;
     height: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
     border: none;
-    -webkit-box-shadow: 0 0 70px -10px black;
-    box-shadow: 0 0 70px -10px black;
+    -webkit-box-shadow: 0 0 70px -10px #000;
+    box-shadow: 0 0 70px -10px #000
 }
 
-
-/*section portfolio*/
-
-
 .portfolio {
-    padding: 115px 0;
+    padding: 115px 0
 }
 
 .portfolio .row {
-    gap: 140px;
+    gap: 140px
 }
 
 .portfolio .col {
-    width: 50%;
+    width: 50%
 }
 
 .portfolio .portfolio__subtitle {
-    font-size: var(--font-xxl);
     line-height: 55px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+    font-weight: 700;
+    margin-bottom: 35px
 }
 
 .portfolio .portfolio__description {
     margin-bottom: 55px;
-    max-width: 515px;
+    max-width: 515px
 }
 
 .portfolio .portfolio__button {
     color: var(--accent-color);
-    margin-bottom: 120px;
+    margin-bottom: 120px
 }
 
 .portfolio .portfolio__button:hover {
@@ -339,7 +282,7 @@ header .active a {
     -o-transition: .3s;
     transition: .3s;
     background-color: var(--accent-color);
-    color: var(--minor-text-color);
+    color: var(--minor-text-color)
 }
 
 .portfolio .portfolio__logo {
@@ -351,64 +294,56 @@ header .active a {
     -moz-column-gap: 45px;
     column-gap: 45px;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .portfolio .portfolio__logo__item {
-    width: calc(50% - 23px);
+    width: calc(50% - 23px)
 }
 
 .portfolio .portfolio__logos {
-    stroke-width: 0.5;
+    stroke-width: .5;
     fill: transparent;
     stroke: var(--accent-color);
     width: 15%;
-    margin-bottom: 15px;
+    margin-bottom: 15px
 }
 
 .portfolio .portfolio__logo__subtitle {
     font-size: var(--font-ld);
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .portfolio .portfolio__logo__text {
-    max-width: 290px;
+    max-width: 290px
 }
 
 .line {
-    width: 100%;
     height: 2px;
-    background: #ececec;
-    margin: 0 auto;
+    background: #ececec
 }
 
-
-/*section products*/
-
-
 .products {
-    padding: 100px 0 70px;
+    padding: 100px 0 70px
 }
 
 .products .products__subtitle {
     font-size: var(--font-xxl);
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 35px
 }
 
 .products .products__subtitle__text {
     max-width: 510px;
     margin: 0 auto 35px;
-    text-align: center;
+    text-align: center
 }
 
 .products .products__line {
     max-width: 130px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin: 0 auto 20px;
+    margin: 0 auto 20px
 }
 
 .products .products__nav-list {
@@ -418,22 +353,25 @@ header .active a {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    gap: 55px;
+    gap: 55px
 }
 
 .products .products__nav-list button {
     color: #4c4c4c;
     font-size: var(--font-ld);
     font-weight: 600;
-    padding: 70px 0;
+    padding: 70px 0
 }
 
-.products .products__nav-list li button:hover,
-.products .products__nav-list li button.active {
+.contact .contact__content__right, .contact .contact__content__right a, .contact .contact__form button, .footer, .subscription .subscription__button, .subscription .subscription__subtitle, .team .team__item__title {
+    color: var(--minor-text-color)
+}
+
+.products .products__nav-list li button.active, .products .products__nav-list li button:hover {
     color: var(--accent-color);
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s
 }
 
 .row__products__content {
@@ -445,41 +383,35 @@ header .active a {
     -webkit-column-gap: 20px;
     -moz-column-gap: 20px;
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 20px
 }
 
 .products__content__item {
-    width: calc(25% - 15px);
+    width: calc(25% - 15px)
 }
 
-
-/*section team*/
-
-
 .team {
-    padding: 70px 0 115px;
+    padding: 70px 0 115px
 }
 
 .team .team__subtitle {
     font-size: var(--font-xxl);
     margin-bottom: 35px;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .team .team__subtitle__text {
     max-width: 450px;
-    margin-bottom: 30px;
+    margin-bottom: 30px
 }
 
 .team .team__line {
     max-width: 130px;
-    height: 3px;
-    background-color: var(--accent-color);
-    margin-bottom: 60px;
+    margin-bottom: 60px
 }
 
 .team .team__members {
-    position: relative;
+    position: relative
 }
 
 .team .team__member img {
@@ -487,39 +419,39 @@ header .active a {
     -ms-flex: 1;
     flex: 1;
     margin-right: 70px;
-    max-height: 460px;
+    max-height: 460px
 }
 
 .team .team__member figcaption {
     -webkit-box-flex: 2;
     -ms-flex: 2;
-    flex: 2;
+    flex: 2
 }
 
 .team .team__content__title {
     font-size: var(--font-xl);
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .team .team__content__text {
     margin-bottom: 45px;
-    max-width: 640px;
+    max-width: 640px
 }
 
 .team .team__content__list {
     gap: 40px;
     left: 460px;
     position: absolute;
-    top: 185px;
+    top: 185px
 }
 
 .team .team__content__list a {
     font-style: italic;
-    -webkit-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
-    margin-bottom: 70px;
+    -webkit-transition: color .3s;
+    -o-transition: color .3s;
+    transition: color .3s;
+    margin-bottom: 70px
 }
 
 .team .team__content__items {
@@ -529,16 +461,16 @@ header .active a {
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 63%;
+    max-width: 63%
 }
 
 .team .team__content__item {
     width: calc(100% / 4 - 15px);
-    position: relative;
+    position: relative
 }
 
 .team .team__content__item-img {
-    width: 100%;
+    width: 100%
 }
 
 .team .team__item__title {
@@ -546,59 +478,51 @@ header .active a {
     bottom: 0;
     width: 100%;
     background-color: #7a786e;
-    color: var(--minor-text-color);
     text-align: center;
     font-size: var(--font-ld);
     font-weight: 600;
-    opacity: 0;
+    opacity: 0
 }
 
 .team .team__content__item:hover .team__item__title {
-    opacity: 1;
+    opacity: 1
 }
-
-
-/*section subscription*/
-
 
 .subscription {
     padding: 140px 0;
-    background-color: var(--light-bg-color);
+    background-color: var(--light-bg-color)
 }
 
 .subscription .subscription__subtitle {
     font-size: var(--font-xxl);
-    color: var(--minor-text-color);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .subscription .subscription__description {
     color: var(--minor-text-color);
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 55px
 }
 
 .subscription .subscription__form {
-    text-align: center;
+    text-align: center
 }
 
 .subscription .subscription__form input {
     height: 80px;
-    /*max-width: 520px;*/
     padding: 30px 360px 30px 30px;
-    margin-right: 20px;
+    margin-right: 20px
 }
 
 .subscription .subscription__button {
     background-color: var(--accent-color);
-    color: var(--minor-text-color);
     border-radius: 5px;
     border: 2px solid var(--accent-color);
     padding: 25px 50px;
     font-weight: 700;
     font-size: var(--font-ld);
-    text-transform: capitalize;
+    text-transform: capitalize
 }
 
 .subscription .subscription__button:hover {
@@ -606,73 +530,70 @@ header .active a {
     -o-transition: .3s;
     transition: .3s;
     background-color: transparent;
-    color: var(--accent-color);
+    color: var(--accent-color)
 }
-
-
-/*section contact*/
 
 .contact {
     padding: 100px 0;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .contact .contact__subtitle {
     font-size: var(--font-xxl);
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
 
 .contact .contact__description {
     margin-bottom: 55px;
-    max-width: 730px;
+    max-width: 730px
 }
 
 .contact .contact__line {
     max-width: 130px;
     height: 3px;
-    background-color:var(--accent-color);
-    margin-bottom: 75px;
+    background-color: var(--accent-color);
+    margin-bottom: 75px
 }
 
 .contact .contact__content {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .contact .contact__content__left {
-    width: 55%;
+    width: 55%
 }
 
 .contact .contact__form {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .contact .contact__form input {
     width: calc(100% / 2 - 15px);
     padding: 20px 0 20px 50px;
-    background-color: #EFEFEF;
-    border: 1px solid #EFEFEF;
+    background-color: #efefef;
+    border: 1px solid #efefef;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
-.contact [type="text"] {
-    margin-right: 30px;
+.contact [type=text] {
+    margin-right: 30px
 }
 
 .contact .contact__form textarea {
-    background-color: #EFEFEF;
-    border: 1px solid #EFEFEF;
+    background-color: #efefef;
+    border: 1px solid #efefef;
     border-radius: 15px;
     padding-left: 30px;
     height: 245px;
     width: 100%;
     padding-top: 30px;
     resize: none;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
 .contact .contact__form button {
@@ -680,17 +601,15 @@ header .active a {
     width: 100%;
     border-radius: 5px;
     background-color: var(--accent-color);
-    color: var(--minor-text-color);
     border: none;
-    text-align: center;
+    text-align: center
 }
 
 .contact .contact__content__right {
     background-color: var(--main-bg-color);
     width: 40%;
-    color: var(--minor-text-color);
     padding: 135px 0 110px 75px;
-    position: relative;
+    position: relative
 }
 
 .contact .contact__content__right:after {
@@ -701,32 +620,22 @@ header .active a {
     height: 100%;
     width: 100vw;
     left: 99%;
-    top: 0;
-
+    top: 0
 }
 
 .contact .contact__info {
     margin-bottom: 40px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
 .contact .contact__address {
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
-
-.contact .contact__content__right a {
-    color: var(--minor-text-color);
-}
-
-
-/*footer*/
-
 
 .footer {
     padding: 55px 0 40px;
-    background-color: var(--main-bg-color);
-    color: var(--minor-text-color);
+    background-color: var(--main-bg-color)
 }
 
 .footer .footer__row {
@@ -737,7 +646,7 @@ header .active a {
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .footer .footer__social {
@@ -746,294 +655,248 @@ header .active a {
     width: calc(100% / 3);
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: end;
+    justify-content: end
 }
 
 .footer .footer__social a {
     width: calc(100% / 8 - 15px);
-    margin-right: 15px;
+    margin-right: 15px
 }
 
 .footer .footer__social a svg {
     stroke-width: 1;
     stroke: var(--minor-text-color);
-    fill: transparent;
+    fill: transparent
 }
 
 .footer .footer__social a:last-child {
-    margin-right: 0;
+    margin-right: 0
 }
 
 @media (max-width: 1280px) {
     .container {
-        max-width: 1024px;
+        max-width: 1024px
     }
 
     .portfolio .row {
-        gap: 70px;
+        gap: 70px
     }
 
     .portfolio .portfolio__subtitle {
-        font-size: var(--font-xl);
+        font-size: var(--font-xl)
     }
 
     .team .team__content__list {
-        left: 420px;
+        left: 420px
     }
 
     .team .team__content__items {
         gap: 10px;
-        max-width: 58%;
+        max-width: 58%
     }
 }
 
 @media (max-width: 1024px) {
+    .banner .row, .contact .contact__content, .portfolio .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal
+    }
+
     .container {
-        max-width: 767px;
+        max-width: 767px
     }
 
     .banner {
-        padding: 55px 0;
+        padding: 55px 0
     }
 
-    .banner .row {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
+    .banner .row, .contact .contact__content {
         -ms-flex-direction: column;
-        flex-direction: column;
+        flex-direction: column
     }
 
-    .banner .col {
+    .banner .col, .portfolio .col {
         width: 100%;
-        text-align: center;
+        text-align: center
     }
 
     .banner .banner__title {
         font-size: var(--font-xl);
         line-height: 40px;
         letter-spacing: 3px;
-        margin-bottom: 25px;
+        margin-bottom: 25px
     }
 
     .banner .banner__description {
         max-width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 30px
     }
 
-    .banner .btn {
-        margin-bottom: 30px;
+    .banner .btn, .contact .contact__description, .contact .contact__form button, .contact .contact__line, .contact .contact__subtitle, .team .team__line {
+        margin-bottom: 30px
     }
 
-    .portfolio {
-        padding: 70px 0;
+    .portfolio, .subscription {
+        padding: 70px 0
     }
 
     .portfolio .row {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        gap: 0;
-    }
-
-    .portfolio .col {
-        width: 100%;
-        text-align: center;
+        gap: 0
     }
 
     .portfolio .portfolio__description {
         margin-bottom: 35px;
-        max-width: 100%;
+        max-width: 100%
     }
 
     .portfolio .portfolio__button {
-        margin-bottom: 50px;
+        margin-bottom: 50px
     }
 
     .portfolio .portfolio__logo {
         row-gap: 0;
         -webkit-column-gap: 0;
         -moz-column-gap: 0;
-        column-gap: 0;
+        column-gap: 0
     }
 
     .portfolio .portfolio__logo__item {
         width: 50%;
-        text-align: justify;
+        text-align: justify
     }
 
     .portfolio .portfolio__logo__text {
         max-width: 90%;
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
-    .products {
-        padding: 50px 0;
+    .contact, .products, .team {
+        padding: 50px 0
     }
 
     .products .products__line {
-        margin: 0 auto;
+        margin: 0 auto
     }
 
     .products .products__nav-list button {
         font-size: var(--font-md);
         padding: 40px 0;
-        text-align: center;
+        text-align: center
     }
 
     .products__content__item {
-        width: calc(100% / 3 - 15px);
-    }
-
-    .team {
-        padding: 50px 0;
+        width: calc(100% / 3 - 15px)
     }
 
     .team .team__member img {
         margin-right: 50px;
-        max-width: 33%;
+        max-width: 33%
     }
 
-    .team .team__subtitle,
-    .team .team__content__title,
-    .team .team__content__text {
-        margin-bottom: 20px;
+    .team .team__content__text, .team .team__content__title, .team .team__subtitle {
+        margin-bottom: 20px
     }
 
     .team .team__subtitle__text {
-        max-width: 470px;
-    }
-
-    .team .team__line {
-        margin-bottom: 30px;
+        max-width: 470px
     }
 
     .team .team__content__list {
         left: 290px;
-        top: 155px;
+        top: 155px
     }
 
     .team .team__content__list a {
         font-size: var(--font-ld);
-        margin-bottom: 0;
+        margin-bottom: 0
     }
 
     .team .team__content__items {
         max-width: 65%;
-        right: -29px;
-    }
-
-    .subscription {
-        padding: 70px 0;
+        right: -29px
     }
 
     .subscription .subscription__form input {
-        margin: 0 0 20px;
+        margin: 0 0 20px
     }
 
-    .contact {
-        padding: 50px 0;
-    }
-
-    .contact .contact__subtitle,
-    .contact .contact__description,
-    .contact .contact__line {
-        margin-bottom: 30px;
-    }
-
-    .contact .contact__content {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .contact .contact__content__left,
-    .contact .contact__content__right {
-        width: 100%;
-    }
-
-    .contact .contact__form button {
-        margin-bottom: 30px;
+    .contact .contact__content__left, .contact .contact__content__right {
+        width: 100%
     }
 
     .contact .contact__content__right {
-        padding: 75px 0 75px 75px;
+        padding: 75px 0 75px 75px
     }
 
     .footer {
-        padding: 30px 0;
+        padding: 30px 0
     }
 
     .footer .footer__social a {
-        width: calc(100% / 5 - 15px);
+        width: calc(100% / 5 - 15px)
     }
-
 }
 
 @media (max-width: 767px) {
     .container {
-        max-width: 576px;
+        max-width: 576px
     }
 
-    .banner .banner__title {
-        font-size: var(--font-xl);
+    .banner .banner__title, .team .team__content__title {
+        font-size: var(--font-xl)
     }
 
     .products .products__subtitle {
-        margin-bottom: 20px;
+        margin-bottom: 20px
     }
 
     .products .products__nav-list {
-        gap: 25px;
+        gap: 25px
     }
 
     .products .products__nav-list button {
-        padding: 25px 0;
+        padding: 25px 0
     }
 
     .row__products__content {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center;
+        justify-content: center
     }
 
     .products__content__item {
-        width: calc(100% / 2 - 35px);
+        width: calc(100% / 2 - 35px)
     }
 
-    .team .team__subtitle,
-    .team .team__subtitle__text {
+    .team .team__subtitle, .team .team__subtitle__text {
         max-width: 100%;
-        text-align: center;
+        text-align: center
     }
 
     .team .team__line {
-        margin: 0 auto 30px;
+        margin: 0 auto 30px
     }
 
     .team .team__member img {
         margin: 0 20px 20px 0;
-        max-width: 50%;
-    }
-
-    .team .team__content__title {
-        font-size: var(--font-xl);
+        max-width: 50%
     }
 
     .team .team__content__list {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 40px;
-        top: 230px;
+        top: 230px
     }
 
-    .team .team__content__list li  {
-        width: calc(100% / 2 - 20px);
+    .team .team__content__list li {
+        width: calc(100% / 2 - 20px)
     }
 
     .team .team__content__list a {
-        font-size: var(--font-ld);
+        font-size: var(--font-ld)
     }
 
     .team .team__content__items {
@@ -1042,90 +905,81 @@ header .active a {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        gap: 0;
+        gap: 0
     }
 
     .subscription .subscription__subtitle {
-        font-size: var(--font-xxl);
+        font-size: var(--font-xxl)
     }
 
     .subscription .subscription__form input {
-        max-width: 520px;
+        max-width: 520px
     }
 }
 
 @media (max-width: 576px) {
-    header {
-        display: none;
+    .products .products__nav-list, header {
+        display: none
     }
 
     .banner {
-        padding: 25px 0;
+        padding: 25px 0
     }
 
-    .banner .btn {
-        width: 100%;
+    .banner .btn, .portfolio .portfolio__button {
+        width: 100%
     }
 
     .portfolio .portfolio__subtitle {
         font-size: var(--font-xl);
-        line-height: 40px;
+        line-height: 40px
     }
 
     .portfolio .portfolio__logo__item {
         width: 100%;
-        text-align: justify;
-    }
-
-    .portfolio .portfolio__button {
-        width: 100%;
+        text-align: justify
     }
 
     .products .products__line {
-        margin: 0 auto 20px;
-    }
-
-    .products .products__nav-list {
-        display: none;
+        margin: 0 auto 20px
     }
 
     .products__content__item {
-        width: 90%;
+        width: 90%
     }
 
-    .team .team__subtitle {
-        font-size: var(--font-xl);
+    .subscription .subscription__subtitle, .team .team__subtitle {
+        font-size: var(--font-xl)
     }
 
-    .team .team__content__title,
-    .team__content__text{
-        text-align: center;
+    .team .team__content__title, .team__content__text {
+        text-align: center
     }
 
-    .team .team__member-mark {
+    .contact .contact__form, .footer .footer__row, .team .team__member-mark {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column;
+        flex-direction: column
     }
 
     .team .team__member img {
-        margin:0;
-        max-width: 100%;
+        margin: 0;
+        max-width: 100%
     }
 
     .team .team__content__list {
         position: static;
         display: block;
-        margin-bottom: 15px;
+        margin-bottom: 15px
     }
 
     .team .team__content__list li:before {
-        content: "🚀";
+        content: "🚀"
     }
 
     .team .team__content__list li a {
-        padding-left: 5px;
+        padding-left: 5px
     }
 
     .team .team__content__items {
@@ -1136,20 +990,16 @@ header .active a {
         row-gap: 10px;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center;
+        align-items: center
     }
 
     .team .team__content__item {
-        width: 70%;
-    }
-
-    .subscription .subscription__subtitle {
-        font-size: var(--font-xl);
+        width: 70%
     }
 
     .subscription .subscription__form input {
         max-width: 300px;
-        padding-right: 50px;
+        padding-right: 50px
     }
 
     .subscription .subscription__button {
@@ -1157,44 +1007,30 @@ header .active a {
     }
 
     .contact .contact__subtitle {
-        font-size: var(--font-xxl);
-    }
-
-    .contact .contact__form {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        font-size: var(--font-xxl)
     }
 
     .contact .contact__form input {
-        width: 100%;
+        width: 100%
     }
 
     .contact .contact__content__right {
-        padding: 50px 0 50px 50px;
-    }
-
-    .footer .footer__row {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        padding: 50px 0 50px 50px
     }
 
     .footer .footer__copyright p {
         font-size: var(--font-sm);
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 
     .footer .footer__social {
         width: 100%;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
-        justify-content: center;
+        justify-content: center
     }
 
     .footer .footer__social a {
-        width: calc(100% / 8 - 15px);
+        width: calc(100% / 8 - 15px)
     }
 }

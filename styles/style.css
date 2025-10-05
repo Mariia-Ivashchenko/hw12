@@ -1,7 +1,158 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Italic'), local('OpenSans-Italic'),
+    url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+    url('../fonts/OpenSans-Italic.woff') format('woff'),
+    url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'),
+    url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+    url('../fonts/OpenSans-ExtraBold.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/OpenSans-SemiBold.woff') format('woff'),
+    url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Regular'), local('OpenSans-Regular'),
+    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    all: unset;
+}
+
+label {
+    display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+:root {
+    --accent-color: #ff2d2d;
+    --main-bg-color: #313030;
+    --header-color: #f6f2f2;
+    --light-bg-color: #f5f0dd;
+    --main-text-color: #4c4c4c;
+    --minor-text-color: #FFFFFFFF;
+
+    --font-sm: 12px;
+    --font-md: 16px;
+    --font-ld: 24px;
+    --font-xl: 32px;
+    --font-xxl: 48px;
+
+}
+
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
-    color: #000000;
+    font-size: var(--font-md);
+    color: var(--main-text-color);
     /*?*/
     font-optical-sizing: auto;
     font-style: normal;
@@ -31,11 +182,11 @@ a {
 }
 
 .btn {
-    border: 2px solid #ff2d2d;
+    border: 2px solid var(--accent-color);
     border-radius: 5px;
     padding: 13px 53px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: var(--font-ld);
     text-transform: capitalize;
 }
 
@@ -44,24 +195,24 @@ a {
 
 
 header {
-    background-color: #f6f2f2;
+    background-color: var(--header-color);
     padding: 30px 0 0 0;
 }
 
 .header__nav {
-    background-color: #313030;
+    background-color: var(--main-bg-color);
 }
 
 header a {
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color: var(--minor-text-color);
     padding: 25px 30px;
 }
 
 header a:hover,
 header .active a {
-    background-color: #ff3f40;
+    background-color: var(--accent-color);
     transition: .3s;
 }
 
@@ -76,7 +227,7 @@ header .active a {
 
 .banner {
     padding: 110px 0;
-    background-color: #f6f2f2;
+    background-color: var(--header-color);
 }
 
 .banner .row {
@@ -89,7 +240,7 @@ header .active a {
 }
 
 .banner .banner__title {
-    font-size: 50px;
+    font-size: var(--font-xxl);
     line-height: 65px;
     font-weight: 800;
     text-transform: uppercase;
@@ -103,14 +254,14 @@ header .active a {
 }
 
 .banner .banner__contact {
-    background-color: #ff2d2d;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--minor-text-color);
 }
 
 .banner .banner__contact:hover {
     transition: .3s;
     background-color: transparent;
-    color: #ff2d2d;
+    color: var(--accent-color);
 }
 
 .banner__video-wrapper iframe {
@@ -138,7 +289,7 @@ header .active a {
 }
 
 .portfolio .portfolio__subtitle {
-    font-size: 45px;
+    font-size: var(--font-xxl);
     line-height: 55px;
     font-weight: bold;
     text-transform: uppercase;
@@ -152,14 +303,14 @@ header .active a {
 }
 
 .portfolio .portfolio__button {
-    color: #ff2d2d;
+    color: var(--accent-color);
     margin-bottom: 120px;
 }
 
 .portfolio .portfolio__button:hover {
     transition: .3s;
-    background-color: #ff2d2d;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--minor-text-color);
 }
 
 .portfolio .portfolio__logo {
@@ -174,13 +325,13 @@ header .active a {
 }
 
 .portfolio .portfolio__logos {
-    color: #ff0000;
-    font-size: 45px;
+    color: var(--accent-color);
+    font-size: var(--font-xxl);
     margin-bottom: 15px;
 }
 
 .portfolio .portfolio__logo__subtitle {
-    font-size: 24px;
+    font-size: var(--font-ld);
     font-weight: 600;
     margin-bottom: 25px;
 }
@@ -205,7 +356,7 @@ header .active a {
 }
 
 .products .products__subtitle {
-    font-size: 42px;
+    font-size: var(--font-xxl);
     font-weight: bold;
     text-align: center;
     margin-bottom: 35px;
@@ -220,7 +371,7 @@ header .active a {
 .products .products__line {
     max-width: 130px;
     height: 3px;
-    background-color: #ff2d2d;
+    background-color: var(--accent-color);
     margin: 0 auto 20px;
 }
 
@@ -232,14 +383,14 @@ header .active a {
 
 .products .products__nav-list button {
     color: #4c4c4c;
-    font-size: 22px;
+    font-size: var(--font-ld);
     font-weight: 600;
     padding: 70px 0;
 }
 
 .products .products__nav-list li button:hover,
 .products .products__nav-list li button.active {
-    color: #ff2d2d;
+    color: var(--accent-color);
     transition: 0.3s;
 }
 
@@ -263,7 +414,7 @@ header .active a {
 }
 
 .team .team__subtitle {
-    font-size: 42px;
+    font-size: var(--font-xxl);
     margin-bottom: 35px;
     font-weight: bold;
 }
@@ -276,7 +427,7 @@ header .active a {
 .team .team__line {
     max-width: 130px;
     height: 3px;
-    background-color: #ff2d2d;
+    background-color: var(--accent-color);
     margin-bottom: 60px;
 }
 
@@ -295,7 +446,7 @@ header .active a {
 }
 
 .team .team__content__title {
-    font-size: 30px;
+    font-size: var(--font-xl);
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -341,9 +492,9 @@ header .active a {
     bottom: 0;
     width: 100%;
     background-color: #7a786e;
-    color: white;
+    color: var(--minor-text-color);
     text-align: center;
-    font-size: 18px;
+    font-size: var(--font-ld);
     font-weight: 600;
     opacity: 0;
 }
@@ -358,18 +509,18 @@ header .active a {
 
 .subscription {
     padding: 140px 0;
-    background-color: #f5f0dd;
+    background-color: var(--light-bg-color);
 }
 
 .subscription .subscription__subtitle {
-    font-size: 45px;
-    color: white;
+    font-size: var(--font-xxl);
+    color: var(--minor-text-color);
     text-align: center;
     margin-bottom: 40px;
 }
 
 .subscription .subscription__description {
-    color: white;
+    color: var(--minor-text-color);
     text-align: center;
     margin-bottom: 55px;
 }
@@ -386,20 +537,20 @@ header .active a {
 }
 
 .subscription .subscription__button {
-    background-color: #ff2d2d;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--minor-text-color);
     border-radius: 5px;
-    border: 2px solid #ff2d2d;
+    border: 2px solid var(--accent-color);
     padding: 25px 50px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: var(--font-ld);
     text-transform: capitalize;
 }
 
 .subscription .subscription__button:hover {
     transition: .3s;
     background-color: transparent;
-    color: #ff2d2d;
+    color: var(--accent-color);
 }
 
 
@@ -411,13 +562,12 @@ header .active a {
 }
 
 .contact .contact__subtitle {
-    font-size: 50px;
+    font-size: var(--font-xxl);
     text-transform: uppercase;
     margin-bottom: 50px;
 }
 
 .contact .contact__description {
-    font-size: 18px;
     margin-bottom: 55px;
     max-width: 730px;
 }
@@ -425,7 +575,7 @@ header .active a {
 .contact .contact__line {
     max-width: 130px;
     height: 3px;
-    background-color: #ff2d2d;
+    background-color:var(--accent-color);
     margin-bottom: 75px;
 }
 
@@ -470,16 +620,16 @@ header .active a {
     height: 70px;
     width: 100%;
     border-radius: 5px;
-    background-color: red;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--minor-text-color);
     border: none;
     text-align: center;
 }
 
 .contact .contact__content__right {
-    background-color: black;
+    background-color: var(--main-bg-color);
     width: 40%;
-    color: white;
+    color: var(--minor-text-color);
     padding: 135px 0 110px 75px;
     position: relative;
 }
@@ -488,7 +638,7 @@ header .active a {
     content: " ";
     position: absolute;
     display: block;
-    background-color: black;
+    background-color: var(--main-bg-color);
     height: 100%;
     width: 100vw;
     left: 99%;
@@ -507,7 +657,7 @@ header .active a {
 }
 
 .contact .contact__content__right a {
-    color: white;
+    color: var(--minor-text-color);
 }
 
 
@@ -516,8 +666,8 @@ header .active a {
 
 .footer {
     padding: 55px 0 40px;
-    background-color: black;
-    color: white;
+    background-color: var(--main-bg-color);
+    color: var(--minor-text-color);
 }
 
 .footer .footer__row {
@@ -526,9 +676,9 @@ header .active a {
 }
 
 .footer .footer__social a {
-    font-size: 30px;
+    font-size: var(--font-xl);
     margin-right: 15px;
-    color: white;
+    color: var(--minor-text-color);
 }
 
 .footer .footer__social a:last-child {
@@ -539,8 +689,13 @@ header .active a {
     .container {
         max-width: 1024px;
     }
+
     .portfolio .row {
         gap: 70px;
+    }
+
+    .portfolio .portfolio__subtitle {
+        font-size: var(--font-xl);
     }
 
     .team .team__content__list {
@@ -572,7 +727,7 @@ header .active a {
     }
 
     .banner .banner__title {
-        font-size: 35px;
+        font-size: var(--font-xl);
         line-height: 40px;
         letter-spacing: 3px;
         margin-bottom: 25px;
@@ -634,7 +789,7 @@ header .active a {
     }
 
     .products .products__nav-list button {
-        font-size: 25px;
+        font-size: var(--font-md);
         padding: 40px 0;
         text-align: center;
     }
@@ -672,7 +827,7 @@ header .active a {
     }
 
     .team .team__content__list a {
-        font-size: 18px;
+        font-size: var(--font-ld);
          margin-bottom: 0;
     }
 
@@ -728,7 +883,7 @@ header .active a {
     }
 
     .banner .banner__title {
-        font-size: 31px;
+        font-size: var(--font-xl);
     }
 
     .products .products__subtitle {
@@ -740,7 +895,6 @@ header .active a {
     }
 
     .products .products__nav-list button {
-        font-size: 15px;
         padding: 25px 0;
     }
 
@@ -768,7 +922,7 @@ header .active a {
     }
 
     .team .team__content__title {
-        font-size: 35px;
+        font-size: var(--font-xl);
     }
 
     .team .team__content__list {
@@ -782,7 +936,7 @@ header .active a {
     }
 
     .team .team__content__list a {
-        font-size: 20px;
+        font-size: var(--font-ld);
     }
 
     .team .team__content__items {
@@ -793,7 +947,7 @@ header .active a {
     }
 
     .subscription .subscription__subtitle {
-        font-size: 40px;
+        font-size: var(--font-xxl);
     }
 
     .subscription .subscription__form input {
@@ -801,7 +955,7 @@ header .active a {
     }
 
     .footer .footer__social a {
-        font-size: 20px;
+        font-size: var(--font-ld);
     }
 }
 
@@ -819,7 +973,7 @@ header .active a {
     }
 
     .portfolio .portfolio__subtitle {
-        font-size: 34px;
+        font-size: var(--font-xl);
         line-height: 40px;
     }
 
@@ -845,7 +999,7 @@ header .active a {
     }
 
     .team .team__subtitle {
-        font-size: 35px;
+        font-size: var(--font-xl);
     }
 
     .team .team__content__title,
@@ -887,7 +1041,7 @@ header .active a {
     }
 
     .subscription .subscription__subtitle {
-        font-size: 30px;
+        font-size: var(--font-xl);
     }
 
     .subscription .subscription__form input {
@@ -900,12 +1054,9 @@ header .active a {
     }
 
     .contact .contact__subtitle {
-        font-size: 40px;
+        font-size: var(--font-xxl);
     }
 
-    .contact .contact__description {
-        font-size: 15px;
-    }
     .contact .contact__form {
         flex-direction: column;
     }
@@ -923,7 +1074,7 @@ header .active a {
     }
 
     .footer .footer__copyright p {
-        font-size: 13px;
+        font-size: var(--font-sm);
         margin-bottom: 10px;
     }
 }
